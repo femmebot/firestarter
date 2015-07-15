@@ -27,8 +27,9 @@ a {
 }
 ```
 
-**Conventions**
-Separate scss files into `_variables.scss`, `_mixins.scss`, `_globals.scss`, `pages/_about_us.scss`and ``@import` each into `main.scss`
+#### File Organization
+
+Separate scss files into `_variables.scss`, `_mixins.scss`, `_globals.scss`, `pages/_about_us.scss`and `@import` each into `main.scss`
 The order is important!
 
 ```
