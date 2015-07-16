@@ -34,13 +34,23 @@ sass --watch sass_directory/example.scss:css_directory/example.css
 
 #### Nesting Selectors
 
-Supports CSS `>` to reference a selector's direct parent. Reference parent selectors using `&`.
+Reference parent selectors using `&`. Supports CSS `>` to reference children (i.e., immediate descendant) of a parent. 
+
 
 #### Variables
 
+Use `$` to create variables to replace repetitive declarations.
+Can be used with Math operators to perform calculations.
+
+
 #### Mixins
 
+
+
 #### Extending Selectors
+
+replace `#` or `.` with `%` to create a placeholder variable that can be used with `@extend`
+
 
 #### Color
 
