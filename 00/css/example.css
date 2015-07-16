@@ -1,0 +1,13 @@
+body {
+  background-color: #cfdccc;
+  font-family: sans-serif;
+  color: #3a3737; }
+
+a {
+  color: #ff5154; }
+  a :hover {
+    color: #6e6969; }
+  a span {
+    color: #6e6969; }
+
+/*# sourceMappingURL=example.css.map */

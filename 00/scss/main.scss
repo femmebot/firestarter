@@ -1,0 +1,42 @@
+// Definitions
+// Variables
+$hyperlink-color: #ff5154;
+$helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Mixins
+
+// Globals
+
+// Page-Specific
+
+
+
+body {
+
+}
+.container-fluid {
+  width: 100%;
+}
+.container {
+  max-width: 960px;
+  padding: 60px 0;
+  margin: 0 auto;
+  h1 {
+    font: 700 60px/64px $helvetica;
+  }
+  p {
+    font: 400 16px/24px $helvetica;
+    max-width: 500px;
+    margin: 0 0 24px;
+    a {
+      color: $hyperlink-color;
+      }
+    &:last-child {
+      font-size: 12px;
+    }
+  }
+  // p:last-child {
+  //   font-size: 12px;
+  // }
+
+}

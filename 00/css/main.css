@@ -1,0 +1,19 @@
+.container-fluid {
+  width: 100%; }
+
+.container {
+  max-width: 960px;
+  padding: 60px 0;
+  margin: 0 auto; }
+  .container h1 {
+    font: 700 60px/64px "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .container p {
+    font: 400 16px/24px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    max-width: 500px;
+    margin: 0 0 24px; }
+    .container p a {
+      color: #ff5154; }
+    .container p:last-child {
+      font-size: 12px; }
+
+/*# sourceMappingURL=main.css.map */
