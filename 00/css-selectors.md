@@ -86,10 +86,11 @@ can be used with math calculations:
 tr:nth-child(2n+1) td { background-color: #ddd; }
 ```
 
-Also have `:nth-of-type` which is similar to :nth-child but targets only elements of the same type
+Also have `last-of-type`, `:nth-of-type` which is similar to :nth-child but targets only elements of the same type
 ```
 p:nth-of-type(odd) { background-color: #ddd; }
 ```
+
 
 `:only-child` targets elements that are solo children of a parent. Useful if you have a list style that works when you have multiple items in a list but want to style single list items differently
 
