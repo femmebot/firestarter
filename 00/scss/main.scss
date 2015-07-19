@@ -44,6 +44,9 @@ body {
   // }
   ul {
     color: red;
+    & > li:nth-last-child(2) {
+      color: blue;
+    }
   }
   .avatar {
     @include circle(60px);

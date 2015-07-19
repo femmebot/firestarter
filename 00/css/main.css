@@ -17,6 +17,8 @@
       font-size: 12px; }
   .container ul {
     color: red; }
+    .container ul > li:nth-last-child(2) {
+      color: blue; }
   .container .avatar {
     height: 60px;
     width: 60px;

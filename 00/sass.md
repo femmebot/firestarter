@@ -160,3 +160,34 @@ interpolation syntax `#{$variable}`.
 
 @include tint(yellow);
 ```
+
+#### Loops
+
+`@for` and `@each`
+
+```
+@for $i from 1 through 3 {
+  .item-#{$i} { width: 2em * $i; }
+}
+```
+
+Above example gets compiled to:
+
+```
+.item-1 {
+  width: 2em; }
+.item-2 {
+  width: 4em; }
+.item-3 {
+  width: 6em; }
+```
+
+`@each` takes a list and applies the styles to each list item
+
+```
+@each $social in facebook, twitter, instagram, tumblr {
+  .#{$social}-icon {
+    background-image: url('../images/#{$social}.svg');
+  }
+}
+```
