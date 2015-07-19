@@ -54,6 +54,12 @@ To define a mixin, add `@mixin`. May include argument(s).
   border-radius: $diam / 2;
 }
 ```
+```
+.avatar {
+  @include circle(60px);
+  border: 1px solid #000;
+}
+```
 
 
 #### Extending Selectors
