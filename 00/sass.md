@@ -45,7 +45,7 @@ Can be used with Math operators to perform calculations.
 
 #### Mixins
 
-To define a mixin, add `@mixin`. May include argument(s).
+To define a mixin, add `@mixin` with optional argument(s).
 
 ```
 @mixin circle($diam) {
@@ -91,10 +91,12 @@ a {
 #### Importing Files
 
 **Conventions**
-Separate scss files into `_variables.scss`, `_mixins.scss`, `_globals.scss`, `pages/_about_us.scss`and ``@import` each into `main.scss`
+Separate scss files into `_variables.scss`, `_mixins.scss`, `_globals.scss`, `pages/_about_us.scss` and `@import` each into `main.scss`
 The order is important!
 
 ```
+@import _reset.scss;
+
 // Definitions
 @import "_variables.scss";
 @import "_mixins.scss";
@@ -104,4 +106,51 @@ The order is important!
 
 // Page-Specific
 @import "pages/_about_us.scss";
+```
+
+#### Extending Sass
+
+Functions: Use for calculations. Must return value.
+
+```
+@function circle($height){
+  @return $height / 2
+}
+
+img {
+  height: 30px;
+  width: 30px;
+  border-radius: circle(30px);
+}
+```
+
+#### Media Queries
+
+
+#### Interpolation
+
+interpolation syntax `#{$variable}`.
+
+```
+@mixin color_class($color){
+  .#{$color} {
+    color: $color;
+  }
+}
+
+@include color_class(blue);
+```
+
+#### If/Else Statements
+
+```
+@mixin tint($color){
+  @if $color ==  red {
+    background-color: lighten($color, 80%);
+  } @else {
+    background-color: lighten($color, 50%);
+  }
+}
+
+@include tint(yellow);
 ```
