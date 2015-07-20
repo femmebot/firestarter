@@ -203,7 +203,7 @@ Above example gets compiled to:
   }  
 }
 
-@include social-icons(facebook, twitter, instagram, tumblr)
+@include social-icons(facebook, twitter, instagram, tumblr);
 ```
 
 Alternately, we can eliminate the ellipsis and use a space-separated list:
@@ -216,6 +216,21 @@ Alternately, we can eliminate the ellipsis and use a space-separated list:
   }  
 }
 
-@include social-icons(facebook twitter instagram tumblr)
-@include social-icons(github)
+@include social-icons(facebook twitter instagram tumblr);
+@include social-icons(github);
+```
+
+Mixins can have default values, and you can also pass named arguments and ignore the order when including the mixin
+
+```
+@mixin box ($size, $color, $display: block) {
+  .box {
+    height: $size;
+    width: $size;
+    background-color: $color;
+    display: $display;
+  }
+}
+
+@include box (color: grey, size: 30px);
 ```
