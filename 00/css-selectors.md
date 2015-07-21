@@ -35,7 +35,7 @@ label[for="fContact"] { }
 
 #### Substring Matching Attribute Selectors
 
-Use `target` attribute to target element that contains `_blank` value
+Use `target` attribute to target element that has `_blank` value
 ```
 a[target="_blank"] {
   padding-left: 16px;
@@ -141,6 +141,9 @@ p:empty { padding: 0; }
 
 
 #### UI Element States
+
+[Pseudo-Class Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/:disabled)
+`:focus`, `:checked`, `:disabled`, `:enabled`
 
 Pseudo-Classes for use with web forms
 
