@@ -191,3 +191,46 @@ Above example gets compiled to:
   }
 }
 ```
+
+#### Advanced Mixins
+
+```
+@mixin social-icons ($networks...) {
+  @each $social in $networks {
+    .#{$social}-icon {
+      background-image: url('../images/#{$social}.svg');
+    }
+  }  
+}
+
+@include social-icons(facebook, twitter, instagram, tumblr);
+```
+
+Alternately, we can eliminate the ellipsis and use a space-separated list:
+```
+@mixin social-icons ($networks) {
+  @each $social in $networks {
+    .#{$social}-icon {
+      background-image: url('../images/#{$social}.svg');
+    }
+  }  
+}
+
+@include social-icons(facebook twitter instagram tumblr);
+@include social-icons(github);
+```
+
+Mixins can have default values, and you can also pass named arguments and ignore the order when including the mixin
+
+```
+@mixin box ($size, $color, $display: block) {
+  .box {
+    height: $size;
+    width: $size;
+    background-color: $color;
+    display: $display;
+  }
+}
+
+@include box (color: grey, size: 30px);
+```
