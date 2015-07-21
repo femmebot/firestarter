@@ -33,13 +33,21 @@ Use `for` attribute to select a specific input type.
 label[for="fContact"] { }
 ```
 
-Use `target` attribute to target a element with `_blank` value
+#### Substring Matching Attribute Selectors
+
+Use `target` attribute to target element that contains `_blank` value
 ```
 a[target="_blank"] {
   padding-left: 16px;
   background: url(external-link.png) left center no-repeat;
 }
 ```
+
+`^` match string at the beginning of an attribute's value
+`$` match string at the end of an attribute's value
+`*` match any part of an attribute's value
+
+[Attribute Selectors Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
 
 ```
 a[href ^="mailto:"] {
@@ -50,6 +58,7 @@ a[href ^="mailto:"] {
 }
 ```
 use `^=` to match href that begins with `mailto:`
+
 
 #### Structural Pseudo-Class Selectors
 
@@ -113,7 +122,6 @@ Also have `last-of-type`, `:nth-of-type` which is similar to :nth-child but targ
 p:nth-of-type(odd) { background-color: #ddd; }
 ```
 
-
 `:only-child` targets elements that are solo children of a parent. Useful if you have a list style that works when you have multiple items in a list but want to style single list items differently
 [:only-child MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/:only-child)
 
@@ -130,6 +138,7 @@ li:only-child { list-style-type: none; }
 p { padding: 20px 0; }
 p:empty { padding: 0; }
 ```
+
 
 #### UI Element States
 
