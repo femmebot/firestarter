@@ -21,17 +21,25 @@ form [type] {
 }
 ```
 
+use input type to target specific form input
+
 ```
 form input[type="text"] { }
 form input[type="submit"] { }
 ```
-use input type to target specific form input
 
-
+Use `for` attribute to select a specific input type.
 ```
 label[for="fContact"] { }
 ```
-Use `for` attribute to select a specific input type.
+
+Use `target` attribute to target a element with `_blank` value
+```
+a[target="_blank"] {
+  padding-left: 16px;
+  background: url(external-link.png) left center no-repeat;
+}
+```
 
 ```
 a[href ^="mailto:"] {
