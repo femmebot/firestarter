@@ -7,6 +7,20 @@ Target elements based on document position without having to create classes.
 
 #### Attribute Selectors
 
+[Attribute Selectors reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
+
+```
+[type] {
+  border: 1px solid #ccc;
+}
+```
+or, more explicitly:
+```
+form [type] {
+  color: blue;
+}
+```
+
 ```
 form input[type="text"] { }
 form input[type="submit"] { }
