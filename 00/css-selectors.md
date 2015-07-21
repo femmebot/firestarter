@@ -107,6 +107,7 @@ p:nth-of-type(odd) { background-color: #ddd; }
 
 
 `:only-child` targets elements that are solo children of a parent. Useful if you have a list style that works when you have multiple items in a list but want to style single list items differently
+[:only-child MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/:only-child)
 
 ```
 li { list-style-type: disc; }
@@ -114,6 +115,8 @@ li:only-child { list-style-type: none; }
 ```
 
 `:empty` matches an element if it's empty
+[:empty MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/:empty)
+
 
 ```
 p { padding: 20px 0; }
