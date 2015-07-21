@@ -179,6 +179,8 @@ example uses for inserting copyright info, adding bubble arrow or automatically 
 #### Combinators
 
 Combining selectors to target elements
-
+`>`, `+`, `~`
 * Descendant Selector: Selects all descendants of a specified parent
-* Child Selector: `>` Selects all children of a specified parent `li { color: 000; } ul > li  { color: red; }`
+* Child Selector: `>` Selects all direct children of a specified parent `li { color: 000; } ul > li  { color: red; }`
+* Adjacent Sibling Combinator: `+` targets the sibling element immediately following a specific selector
+* General Sibling Combinator: `~` targets every sibling element of a specified element

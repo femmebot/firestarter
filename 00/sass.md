@@ -232,5 +232,5 @@ Mixins can have default values, and you can also pass named arguments and ignore
   }
 }
 
-@include box (color: grey, size: 30px);
+@include box ($color: grey, $size: 30px);
 ```
