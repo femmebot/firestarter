@@ -101,7 +101,7 @@ can be appended to any selector including classes and IDs
 #idname:last-child
 ```
 
-`:nth-child()` can be used to target select multiple elements based on their position in the document tree. Can be used, for example, to create striped table rows.
+`:nth-child(an+b)` takes an argument _(an+b)_ where _n_ does not change, _b_ is the starting point and _a_ is the multiple after the starting point. can be used to target select multiple elements based on their position in the document tree. Can be used, for example, to create striped table rows.
 
 ```
 tr:nth-child(odd) td { background-color: #ddd; }
