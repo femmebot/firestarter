@@ -192,7 +192,7 @@ input:focus:required:valid { background: url(valid.png) no-repeat; }
 
 #### Pseudo-Elements
 
-Matching virtual elements that don't explicitly exist in the document tree. Pseudo-Elements act as if a new element, such as `<span>` was added to your document and then the style applied to that.
+Matching virtual elements that don't explicitly exist in the document tree (DOM). Pseudo-Elements allow you to style content as though here were a <span> tag inserted in there. Pseudo-Elements may also use double-colons to distinguish it from true elements like so `::first-line` `::first-letter` `::before` `::after`. Generated content from pseudo-elements are treated as children.
 
 `:first-letter` in the example below used to style a drop cap
 
@@ -206,11 +206,23 @@ Matching virtual elements that don't explicitly exist in the document tree. Pseu
 .wrapper:first-line { text-transform: uppercase; }
 ```
 
-`:before` and `:after` render the content before or after the element when using generated content
+`:before` and `:after` render the content before or after the element when using generated content. Often used with the content property. Content can be text, images or just css-styled decoration.
 ```
 .content:before { content: "Start here:"; }
 ```
+```
+.content:before { content: url(../images/icon.svg); }
+```
 example uses for inserting copyright info, adding bubble arrow or automatically inserting clearfix hack for floats
+
+`attr()` can be used to insert an attribute's value into the content.
+[attr() reference](https://developer.mozilla.org/en-US/docs/Web/CSS/attr)
+
+```
+a::after {
+  content: attr(title);
+}
+```
 
 `:root` selects the top-most parent element in a document (usually, `html`)
 
