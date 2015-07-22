@@ -16,7 +16,7 @@ Target elements based on document position without having to create classes.
 ```
 or, more explicitly:
 ```
-form [type] {
+input[type] {
   color: blue;
 }
 ```
@@ -43,8 +43,8 @@ a[target="_blank"] {
 }
 ```
 
-`^` match string at the beginning of an attribute's value
-`$` match string at the end of an attribute's value
+`^` match string at the beginning of an attribute's value,
+`$` match string at the end of an attribute's value,
 `*` match any part of an attribute's value
 
 [Attribute Selectors Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
@@ -211,6 +211,15 @@ Matching virtual elements that don't explicitly exist in the document tree. Pseu
 .content:before { content: "Start here:"; }
 ```
 example uses for inserting copyright info, adding bubble arrow or automatically inserting clearfix hack for floats
+
+`:root` selects the top-most parent element in a document (usually, `html`)
+
+`:target` selects an element with an ID matching the fragment identifier of the URI of that document. You often see this as `http://domain.com/page.html#fragment`
+
+[codepen demo using :target to trigger animation](http://codepen.io/Guilh/pen/QwvxOp)
+
+[:target reference](https://developer.mozilla.org/en-US/docs/Web/CSS/:target)
+
 
 
 #### Combinators
