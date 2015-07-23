@@ -189,6 +189,14 @@ input:focus:required:valid { background: url(valid.png) no-repeat; }
 
 `:not(selector)`
 
+[:not() reference](https://developer.mozilla.org/en-US/docs/Web/CSS/:not)
+
+```
+input:not([type="button"]) {
+  border-color: blue;
+}
+```
+
 
 #### Pseudo-Elements
 
