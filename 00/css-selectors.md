@@ -16,7 +16,7 @@ Target elements based on document position without having to create classes.
 ```
 or, more explicitly:
 ```
-form [type] {
+input[type] {
   color: blue;
 }
 ```
@@ -43,8 +43,8 @@ a[target="_blank"] {
 }
 ```
 
-`^` match string at the beginning of an attribute's value
-`$` match string at the end of an attribute's value
+`^` match string at the beginning of an attribute's value,
+`$` match string at the end of an attribute's value,
 `*` match any part of an attribute's value
 
 [Attribute Selectors Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
@@ -200,7 +200,7 @@ input:not([type="button"]) {
 
 #### Pseudo-Elements
 
-Matching virtual elements that don't explicitly exist in the document tree. Pseudo-Elements act as if a new element, such as `<span>` was added to your document and then the style applied to that.
+Matching virtual elements that don't explicitly exist in the document tree (DOM). Pseudo-Elements allow you to style content as though here were a <span> tag inserted in there. Pseudo-Elements may also use double-colons to distinguish it from true elements like so `::first-line` `::first-letter` `::before` `::after`. Generated content from pseudo-elements are treated as children.
 
 `:first-letter` in the example below used to style a drop cap
 
@@ -214,11 +214,32 @@ Matching virtual elements that don't explicitly exist in the document tree. Pseu
 .wrapper:first-line { text-transform: uppercase; }
 ```
 
-`:before` and `:after` render the content before or after the element when using generated content
+`:before` and `:after` render the content before or after the element when using generated content. Often used with the content property. Content can be text, images or just css-styled decoration.
 ```
 .content:before { content: "Start here:"; }
 ```
+```
+.content:before { content: url(../images/icon.svg); }
+```
 example uses for inserting copyright info, adding bubble arrow or automatically inserting clearfix hack for floats
+
+`attr()` can be used to insert an attribute's value into the content.
+[attr() reference](https://developer.mozilla.org/en-US/docs/Web/CSS/attr)
+
+```
+a::after {
+  content: attr(title);
+}
+```
+
+`:root` selects the top-most parent element in a document (usually, `html`)
+
+`:target` selects an element with an ID matching the fragment identifier of the URI of that document. You often see this as `http://domain.com/page.html#fragment`
+
+[codepen demo using :target to trigger animation](http://codepen.io/Guilh/pen/QwvxOp)
+
+[:target reference](https://developer.mozilla.org/en-US/docs/Web/CSS/:target)
+
 
 
 #### Combinators
