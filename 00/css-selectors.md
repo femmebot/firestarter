@@ -1,6 +1,5 @@
 # CSS Selectors
 
-Notes from O'Reilly webcast, [CSS Selectors with Rachel Andrew](https://event.on24.com/eventRegistration/EventLobbyServlet?target=lobby20.jsp&eventid=1013158&sessionid=1&key=F1BE14FF965B659861E1033DF49568F5&eventuserid=121203768)
 
 Target elements based on document position without having to create classes.
 'Common sense' selectors lets you target elements based on position or type.
